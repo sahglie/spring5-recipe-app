@@ -4,16 +4,16 @@ import javax.persistence.*;
 import java.util.Arrays;
 import java.util.Set;
 
-@Entity
+@Entity(name = "recipes")
 public class Recipe {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     private String description;
-    private Integer prepTime;
-    private Integer cookTime;
-    private Integer servings;
+    private String prepTime;
+    private String cookTime;
+    private String servings;
     private String source;
     private String url;
     private String directions;
@@ -54,27 +54,27 @@ public class Recipe {
         this.description = description;
     }
 
-    public Integer getPrepTime() {
+    public String getPrepTime() {
         return prepTime;
     }
 
-    public void setPrepTime(Integer prepTime) {
+    public void setPrepTime(String prepTime) {
         this.prepTime = prepTime;
     }
 
-    public Integer getCookTime() {
+    public String getCookTime() {
         return cookTime;
     }
 
-    public void setCookTime(Integer cookTime) {
+    public void setCookTime(String cookTime) {
         this.cookTime = cookTime;
     }
 
-    public Integer getServings() {
+    public String getServings() {
         return servings;
     }
 
-    public void setServings(Integer servings) {
+    public void setServings(String servings) {
         this.servings = servings;
     }
 
